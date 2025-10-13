@@ -1,4 +1,4 @@
-Got it. Here is the response with the requested GitHub-friendly Markdown formatting.
+
 
 # Successful-Pairs-of-Spells-and-Potions
 
