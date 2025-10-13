@@ -12,24 +12,31 @@ using namespace std;
 
 class Solution {
 public:
-    int sumDivisibleByK(vector<int>& nums, int k) {
+    // Function to calculate sum of elements whose frequency is divisible by k
+    int sumDivisibleByK(const vector<int>& nums, int k) {
         int sum = 0;
         unordered_map<int,int> freq;
 
-        for (int n : nums)
+        // Count frequency of each element
+        for (int n : nums) 
             freq[n]++;
 
-        for (auto &n : freq) {
-            if (n.second % k == 0)
-                sum += n.first * n.second;
+        // Add elements to sum if their frequency is divisible by k
+        for (auto &p : freq) {
+            if (p.second % k == 0)
+                sum += p.first * p.second;
         }
 
         return sum;
     }
 };
 
-### 🧮 Example
+int main() {
+    Solution sol;
+    vector<int> nums = {2, 2, 3, 3, 3, 4};
+    int k = 2;
+    cout << "Sum: " << sol.sumDivisibleByK(nums, k) << endl; // Output: 4
+    return 0;
+}
 
-Input: nums = [2, 2, 3, 3, 3, 4], k = 2  
-Output: 4
 
