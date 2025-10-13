@@ -27,3 +27,9 @@ public:
         return sum;
     }
 };
+
+### 🧮 Example
+
+Input: nums = [2, 2, 3, 3, 3, 4], k = 2  
+Output: 4
+
